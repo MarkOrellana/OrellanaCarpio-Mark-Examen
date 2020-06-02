@@ -12,11 +12,11 @@ public class Test {
 
 		ClienteDAO cli = DAOFactory.getDAOFactory().getClienteDAO();
 		Cliente cliente1 = new Cliente("0102863693", "Mark", "Cuenca", "09898854540");
-		Cliente cliente2 = new Cliente("0102863694", "Danie", "Cuenca", "09898854540");
+		Cliente cliente2 = new Cliente("0102863694", "Daniel", "Cuenca", "09898854540");
 		Cliente cliente3 = new Cliente("0102863695", "Pedro", "Cuenca", "09898854540");
-//		cli.create(cliente1);
-//		cli.create(cliente2);
-//		cli.create(cliente3);
+		cli.create(cliente1);
+		cli.create(cliente2);
+		cli.create(cliente3);
 		VehiculoDAO veh=DAOFactory.getDAOFactory().getVehiculoDAO();
 		Vehiculo vehiculo1=new Vehiculo("ABC0011","NISSAN","2019",cliente1);
 		Vehiculo vehiculo2=new Vehiculo("ABC0010","NISSAN","2019",cliente2);
@@ -24,6 +24,9 @@ public class Test {
 		veh.create( vehiculo1);
 		veh.create( vehiculo2);
 		veh.create( vehiculo3);
+		
+		//veh.findByUserId("0102863693");
+		
 		
 	}
 

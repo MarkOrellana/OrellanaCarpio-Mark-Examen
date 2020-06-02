@@ -39,7 +39,7 @@ public class JPAVehiculoDAO extends JPAGenericDAO<Vehiculo, Integer> implements 
 	public List<Vehiculo> findByUserId(String cedula) {
 		List<Vehiculo> telefonos = new ArrayList<>();
 		em.clear();
-		String consulta = ("SELECT t FROM Telefono t WHERE t.usuario_cedula='" + cedula + "'");
+		String consulta = ("SELECT t FROM Vehiculo t WHERE t.cliente_cedula='" + cedula + "'");
 		// Query query = em.createQuery( "SELECT t " + "FROM Telefono t " + "WHERE
 		// t.usuario_cedula='"+cedula+"'");
 		try {
